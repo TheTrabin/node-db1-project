@@ -67,5 +67,97 @@ CustomerID	CustomerName	ContactName	    Address	        City	 PostalCode	    Cou
 
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
+Select [City], COUNT(Distinct city) AS CountOf 
+FROM [Customers]
+GROUP BY [city];
+
+City	CountOf
+Aachen	1
+Albuquerque	1
+Anchorage	1
+Bag End	1
+Barcelona	1
+Barquisimeto	1
+Bergamo	1
+Berlin	1
+Bern	1
+Boise	1
+Brandenburg	1
+Bruxelles	1
+Bräcke	1
+Buenos Aires	1
+Butte	1
+Campinas	1
+Caracas	1
+Charleroi	1
+Cork	1
+Cowes	1
+Cunewalde	1
+Elgin	1
+Eugene	1
+Frankfurt a.M.	1
+Genève	1
+Graz	1
+Helsinki	1
+I. de Margarita	1
+Kirkland	1
+Köln	1
+København	1
+Lander	1
+Leipzig	1
+Lille	1
+Lisboa	1
+London	1
+Luleå	1
+Lyon	1
+Madrid	1
+Mannheim	1
+Marseille	1
+Montréal	1
+México D.F.	1
+München	1
+Münster	1
+Nantes	1
+Oulu	1
+Paris	1
+Portland	1
+Reggio Emilia	1
+Reims	1
+Resende	1
+Rio de Janeiro	1
+Salzburg	1
+San Cristóbal	1
+San Francisco	1
+Seattle	1
+Sevilla	1
+Stavern	1
+Strasbourg	1
+Stuttgart	1
+São Paulo	1
+Torino	1
+Toulouse	1
+Tsawassen	1
+Vancouver	1
+Versailles	1
+Walla	1
+Walla Walla	1
+Århus	1
 
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
+
+SELECT SupplierName  FROM [Suppliers] WHERE LENGTH(SupplierName) = 20 OR LENGTH(SupplierName) > 20;
+
+Number of Records: 12
+SupplierName
+New Orleans Cajun Delights
+Grandma Kelly s Homestead
+Cooperativa de Quesos 'Las Cabras'
+Specialty Biscuits, Ltd.
+Refrescos Americanas LTDA
+Heli Süßwaren GmbH & Co. KG
+Plutzer Lebensmittelgroßmärkte AG
+Nord-Ost-Fisch Handelsgesellschaft mbH
+Formaggi Fortini s.r.l.
+Aux joyeux ecclésiastiques
+New England Seafood Cannery
+Pasta Buttini s.r.l.
