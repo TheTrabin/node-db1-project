@@ -67,6 +67,13 @@ CustomerID	CustomerName	ContactName	    Address	        City	 PostalCode	    Cou
 
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
+Select [City]
+FROM [Customers]
+GROUP BY [city];
+
+Number of Records: 70 <~ Includes Bilbo Baggins at Bag End for the final count.
+
+The Below is the list of all unique cities.
 Select [City], COUNT(Distinct city) AS CountOf 
 FROM [Customers]
 GROUP BY [city];
